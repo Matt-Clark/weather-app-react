@@ -1,0 +1,141 @@
+.fog {
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+  z-index: 1;
+
+  &.none {
+    opacity: 0.3;
+  }
+
+  &.dawn {
+    opacity: 0.9;
+  }
+
+  &.day {
+    opacity: 0.9;
+  }
+
+  &.dusk {
+    opacity: 0.4;
+  }
+
+  &.night {
+    opacity: 0.3;
+  }
+}
+
+/* fog effect based on https://github.com/danielstuart14/CSS_FOG_ANIMATION */
+.fog-layer {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+}
+
+.fog-img1, .fog-img2 {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+#FogLayer1 {
+  animation: 
+    foglayer1_opacity 10s linear infinite, 
+    foglayer_move 15s linear infinite;
+  
+  .fog-img1, .fog-img2 {
+    background: url("/img/fog-1.png") no-repeat top left transparent;
+    background-size: 100% 100%;
+  }
+}
+
+#FogLayer2 {
+  animation: 
+    foglayer2_opacity 21s linear infinite,
+		foglayer_move 13s linear infinite;
+
+  .fog-img1, .fog-img2 {
+    background: url("/img/fog-2.png") no-repeat top left transparent;
+    background-size: 100% 100%;
+  }
+}
+
+#FogLayer3 {
+  animation: 
+    foglayer_3_opacity 21s linear infinite,
+		foglayer_moveme 13s linear infinite;
+
+  .fog-img1, .fog-img2 {
+    background: url("/img/fog-2.png") no-repeat top left transparent;
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes foglayer1_opacity {
+  0% {
+    opacity: .1;
+  }
+  22% {
+    opacity: .5;
+  }
+  40% {
+    opacity: .28;
+  }
+  58% {
+    opacity: .4;
+  }
+  80% {
+    opacity: .16;
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
+@keyframes foglayer2_opacity {
+  0% {
+    opacity: .5;
+  }
+  25% {
+    opacity: .2;
+  }
+  50% {
+    opacity: .1;
+  }
+  80% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+
+@keyframes foglayer3_opacity {
+  0% {
+    opacity: .8;
+  }
+  27% {
+    opacity: .2;
+  }
+  52% {
+    opacity: .6;
+  }
+  68% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .8;
+  }
+}
+
+@keyframes foglayer_move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}

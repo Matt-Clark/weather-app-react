@@ -1,0 +1,6 @@
+.search {
+  position: relative;
+  width: clamp(340px, 100%, 600px);
+  margin: 0 auto;
+  z-index: 100;
+}

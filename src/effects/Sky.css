@@ -1,0 +1,162 @@
+@property --sky-color-1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #212121;
+}
+@property --sky-stop-1 {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 5%;
+}
+
+@property --sky-color-2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #282828;
+}
+@property --sky-stop-2 {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --sky-color-3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #282828;
+}
+@property --sky-stop-3 {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 90%;
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@supports (--sky-color-1: red) {
+  .sky {
+    background: linear-gradient(
+      var(--sky-color-1) var(--sky-stop-1),
+      var(--sky-color-2) var(--sky-stop-2),
+      var(--sky-color-3) var(--sky-stop-3)
+    );
+    transition: 
+      --sky-color-1 1s,
+      --sky-stop-1 1s,
+      --sky-color-2 1s,
+      --sky-stop-2 1s,
+      --sky-color-3 1s,
+      --sky-stop-3 1s;
+  }
+
+  .none {
+    --sky-color-1: #212121;
+    --sky-stop-1: 5%;
+    --sky-color-2: #282828;
+    --sky-stop-2: 50%;
+    --sky-color-3: #212121;
+    --sky-stop-3: 90%;
+  }
+
+  /*
+    alt dawn gradient
+    background: linear-gradient(
+      #031e3e 5%, 
+      #355c83 40%,
+      #e26f35 74%, 
+      #6a1516 99%
+    );
+  */
+
+  .dawn {
+    --sky-color-1: #a2b1ea;
+    --sky-stop-1: 40%;
+    --sky-color-2: #faa66a;
+    --sky-stop-2: 85%;
+    --sky-color-3: #e36423;
+    --sky-stop-3: 99%;
+  }
+
+  .day {
+    --sky-color-1: #3378b8;
+    --sky-stop-1: 4%;
+    --sky-color-2: #3378b8;
+    --sky-stop-2: 5%;
+    --sky-color-3: #d8e8fc;
+    --sky-stop-3: 90%;
+  }
+
+  .dusk {
+    --sky-color-1: #0f1833;
+    --sky-stop-1: 5%;
+    --sky-color-2: #31375d;
+    --sky-stop-2: 50%;
+    --sky-color-3: #c79b90;
+    --sky-stop-3: 90%;
+  }
+
+  /*
+    alt dusk gradient
+    background: linear-gradient(
+      #0d0f1e 5%, 
+      #68344e 50%, 
+      #eb7441 99%
+    );
+  */
+
+  .night {
+    --sky-color-1: #060519;
+    --sky-stop-1: 4%;
+    --sky-color-2: #060519;
+    --sky-stop-2: 5%;
+    --sky-color-3: #384762;
+    --sky-stop-3: 90%;
+  }
+}
+
+@supports not (--sky-color-1: red) {
+  .sky, .none {
+    background: linear-gradient(
+      #212121 5%, 
+      #282828 50%, 
+      #212121 90%
+    );
+  }
+
+  .dawn {
+    background: linear-gradient(
+      #a2b1ea 30%, 
+      #faa66a 60%, 
+      #e36423 99%
+    );
+  }
+
+  .day {
+    background: linear-gradient( 
+      #3378b8 5%,
+      #d8e8fc 90%
+    );
+  }
+
+  .dusk {
+    background: linear-gradient(
+      #0f1833 5%, 
+      #31375d 50%,
+      #c79b90 90%
+    );
+  }
+
+  .night {
+    background: linear-gradient( 
+      #060519 5%,
+      #384762 90%
+    );
+  }
+}

@@ -1,0 +1,52 @@
+.current-conditions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  z-index: 100;
+  
+  h1 {
+    width: 100%;
+    font-size: 2em;
+    font-weight: 400;
+  }
+
+  h2 {
+    width: 55%;
+    font-size: 5rem;
+    line-height: 1;
+    text-align: right;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  h3 {
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .temp-range {
+    width: 45%;
+    text-align: left;
+    padding: 0.5rem 0 0 1rem;
+
+    .temp-high, .temp-low {
+      font-size: 1.5rem;
+
+      span {
+        position: relative;
+        top: -0.15rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.check-source {
+  position: relative;
+  z-index: 100;
+}

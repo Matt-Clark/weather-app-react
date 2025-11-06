@@ -1,0 +1,87 @@
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#Cloud1, #Cloud2, #Cloud3, #Cloud4 {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 400px 60px 0 #fff;
+  filter: url(#CloudFilter);
+}
+
+#Cloud1 {
+  top: -400px;
+  left: calc(100% + 80px);
+  width: 190px;
+  height: 130px;
+  opacity: 0.7;
+  animation: cloud1_move 80s -30s linear infinite;
+}
+
+@keyframes cloud1_move {
+  0% {
+    left: calc(100% + 80px);
+  }
+  100% {
+    left: -270px;
+  }
+}
+
+#Cloud2 {
+  top: -280px;
+  left: calc(100% + 80px);
+  width: 300px;
+  height: 70px;
+  opacity: 0.5;
+  animation: cloud2_move 120s 0s linear infinite;
+}
+
+@keyframes cloud2_move {
+  0% {
+    left: calc(100% + 80px);
+  }
+  100% {
+    left: -320px;
+  }
+}
+
+#Cloud3 {
+  top: -160px;
+  left: calc(100% + 80px);
+  width: 700px;
+  height: 120px;
+  opacity: 0.4;
+  animation: cloud3_move 180s -80s linear infinite;
+}
+
+@keyframes cloud3_move {
+  0% {
+    left: calc(100% + 80px);
+  }
+  100% {
+    left: -720px;
+  }
+}
+
+#Cloud4 {
+  top: -120px;
+  left: 0px;
+  width: 325px;
+  height: 210px;
+  opacity: 0.8;
+  animation: cloud4_move 100s -60s linear infinite;
+}
+
+@keyframes cloud4_move {
+  0% {
+    left: calc(100% + 80px);
+  }
+  100% {
+    left: -410px;
+  }
+}

@@ -1,0 +1,29 @@
+#ThunderEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.thunder-none {
+  opacity: 0.5;
+}
+
+.thunder-dawn {
+  background: #060519;
+  opacity: 0.5;
+}
+
+.thunder-day {
+  background: #060519;
+  opacity: 0.4;
+}
+
+.thunder-dusk {
+  background: #060519;
+  opacity: 0.5;
+}
+
+.thunder-night {
+  opacity: 0.5;
+}

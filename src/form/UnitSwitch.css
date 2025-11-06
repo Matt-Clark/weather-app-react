@@ -1,0 +1,69 @@
+.unit-switch {
+  --glass-switch-box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.1), 
+    inset 2px 1px 0px -1px rgba(255,255,255,0.9), 
+    inset -1.5px -1px 0px -1px rgba(255,255,255,0.8), 
+    inset -2px -6px 1px -5px rgba(255,255,255,0.6), 
+    inset -1px 2px 3px -1px rgba(0,0,0,0.2), 
+    inset 0px -4px 1px -2px rgba(0,0,0,0.2), 
+    0px 3px 6px 0px rgba(0,0,0,0.08);
+
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  padding: 0 0.75rem;
+  background: rgba(129, 129, 129, 0.5);
+  border: none;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  box-shadow: var(--glass-switch-box-shadow);
+
+  span {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    z-index: 1;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(2rem - 2px);
+    height: calc(2rem - 6px);
+    background: rgba(220, 220, 218, 0.6);
+    border: none;
+    border-radius: 1rem;
+    box-shadow: var(--glass-switch-box-shadow);
+    z-index: -1;
+    transition: left 0.2s;
+  }
+
+  &.metric:before {
+    left: calc(100% - 2rem - 1px);
+  }
+}
+
+@supports
+  (backdrop-filter: blur(6px)) or
+  (-webkit-backdrop-filter: blur(6px))
+{
+  .unit-switch {
+    color: #fff;
+    background-color: rgba(187, 187, 188, 0.12);
+    backdrop-filter: blur(8px) saturate(150%) brightness(0.75);
+    -webkit-backdrop-filter: blur(8px) saturate(150%); 
+
+    &:before {
+      background-color: rgba(187, 187, 188, 0.36);
+    }
+  }
+}

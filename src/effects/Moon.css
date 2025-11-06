@@ -1,0 +1,16 @@
+.moon {
+  --moon-size: 100px;
+
+  position: absolute;
+  top: -15px;
+  left: calc(70% - (var(--moon-size) / 2));
+  width: var(--moon-size);
+  height: var(--moon-size);
+  background: center center / cover url('/img/moon.jpg');
+  /* moon image by kai Stachowiak - https://www.publicdomainpictures.net/en/view-image.php?image=142270&picture=moon
+     CC0 Public Domain - http://creativecommons.org/publicdomain/zero/1.0/ */
+  border-radius: var(--moon-size);
+  box-shadow: 0 0 130px 10px #fff;
+  filter: blur(1px);
+  z-index: 5;
+}

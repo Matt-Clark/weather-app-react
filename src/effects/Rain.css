@@ -1,0 +1,29 @@
+#RainEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.rain-none {
+  opacity: 0.3;
+}
+
+.rain-dawn {
+  background: rgba(6, 5, 25, 0.7);
+  opacity: 0.8;
+}
+
+.rain-day {
+  background: #060519;
+  opacity: 0.6;
+}
+
+.rain-dusk {
+  background: #060519;
+  opacity: 0.3;
+}
+
+.rain-night {
+  opacity: 0.3;
+}
