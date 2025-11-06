@@ -32,7 +32,7 @@ function App() {
   };
 
   function buildAPIURL() {
-    return `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${units}&lang=en&APPID=${APIKey}`;
+    return `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${units}&lang=en&APPID=${APIKey}`;
   }
 
   function updateCityName(value: string): void {
